@@ -1,66 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Editor | Mustafa</title>
+    <title>Video Editor Portfolio</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            height: 100%;
-            overflow: hidden;
-        }
-        #video-background {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -100;
-            background: rgba(0, 0, 0, 0.65);
-        }
-        #lang-select {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #000000, #333333);
             color: white;
+            padding: 40px 20px;
         }
-        .lang-btn {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #E1306C;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: block;
+            background-color: #E1306C;
             color: white;
-            padding: 18px 40px;
-            margin: 15px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            padding: 15px;
+            margin: 15px auto;
+            width: 80%;
+            max-width: 300px;
+            text-decoration: none;
+            border-radius: 10px;
             font-weight: bold;
         }
-        .lang-btn:hover {
-            background: rgba(255, 51, 102, 0.7);
-            border-color: rgba(255, 51, 102, 0.7);
-            transform: scale(1.05);
+        .btn:hover {
+            background-color: #bd365c;
         }
-        #content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            text-align: center;
-            height: 100vh;
+    </style>
+</head>
+<body>
+    <img src="https://via.placeholder.com/150" class="profile-img" alt="Your Photo">
+    <h1>Your Name Here</h1>
+    <p>Video Editor | Content Creator</p>
+
+    <a href="#" class="btn">My Showreel</a>
+    <a href="#" class="btn">About Me</a>
+    <a href="https://wa.me/YourNumber" class="btn">Contact on WhatsApp</a>
+    <a href="mailto:youremail@example.com" class="btn">Send an Email</a>
+</body>
+</html>            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -262,6 +247,7 @@
 
 </body>
 </html>
+
 
 
 
