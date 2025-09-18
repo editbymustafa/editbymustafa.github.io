@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Editor | Mustafa</title>
     <style>
-        /* General Styles - DO NOT CHANGE */
         body, html {
             margin: 0;
             padding: 0;
@@ -22,7 +21,6 @@
             width: auto;
             height: auto;
             z-index: -100;
-            /* Optional: Add a dark overlay on the video */
             background: rgba(0, 0, 0, 0.65);
         }
         #lang-select {
@@ -61,6 +59,100 @@
             position: relative;
             z-index: 1;
             color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff3366;
+            margin-bottom: 25px;
+            box-shadow: 0 0 30px rgba(255, 51, 102, 0.5);
+        }
+        .btn {
+            display: block;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 16px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 15px;
+            width: 250px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn:hover {
+            background: rgba(255, 51, 102, 0.5);
+            transform: translateY(-5px);
+        }
+        h1 { font-size: 2.8em; margin-bottom: 10px; }
+        p { font-size: 1.2em; color: #ddd; margin-bottom: 30px; }
+        .show-content { display: flex !important; }
+        .hide-lang-select { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <video id="video-background" autoplay loop muted playsinline>
+        <source src="https://drive.google.com/uc?export=download&id=1j70vRfvcolhYYJzh0Oell3QRhXODGGet" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="lang-select">
+        <h2>Choose Language / اختر اللغة</h2>
+        <button class="lang-btn" onclick="selectLanguage('en')">English</button>
+        <button class="lang-btn" onclick="selectLanguage('ar')">العربية</button>
+    </div>
+
+    <div id="content">
+        <img src="https://via.placeholder.com/150" class="profile-img" alt="Mustafa">
+        <div id="text-en">
+            <h1>Mustafa</h1>
+            <p>Video Editor | Content Creator</p>
+            <a href="#" class="btn">My Showreel</a>
+            <a href="#" class="btn">About Me</a>
+            <a href="https://wa.me/966123456789" class="btn">Contact on WhatsApp</a>
+            <a href="mailto:mustafa@example.com" class="btn">Send an Email</a>
+        </div>
+        <div id="text-ar" dir="rtl" style="display: none;">
+            <h1>مصطفى</h1>
+            <p>محرر فيديو | صانع محتوى</p>
+            <a href="#" class="btn">معرض أعمالي</a>
+            <a href="#" class="btn">معلومات عني</a>
+            <a href="https://wa.me/966123456789" class="btn">تواصل عبر واتساب</a>
+            <a href="mailto:mustafa@example.com" class="btn">ارسل بريدًا إلكترونيًا</a>
+        </div>
+    </div>
+
+    <script>
+        function selectLanguage(lang) {
+            document.getElementById('lang-select').classList.add('hide-lang-select');
+            document.getElementById('content').classList.add('show-content');
+            if (lang === 'en') {
+                document.getElementById('text-en').style.display = 'block';
+                document.getElementById('text-ar').style.display = 'none';
+                document.getElementsByTagName('html')[0].setAttribute('lang', 'en');
+                document.getElementsByTagName('html')[0].setAttribute('dir', 'ltr');
+            } else if (lang === 'ar') {
+                document.getElementById('text-en').style.display = 'none';
+                document.getElementById('text-ar').style.display = 'block';
+                document.getElementsByTagName('html')[0].setAttribute('lang', 'ar');
+                document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl');
+            }
+        }
+    </script>
+
+</body>
+</html>            color: white;
             text-align: center;
             height: 100vh;
             display: flex;
@@ -170,5 +262,6 @@
 
 </body>
 </html>
+
 
 
